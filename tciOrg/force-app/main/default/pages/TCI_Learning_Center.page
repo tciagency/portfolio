@@ -1,0 +1,4 @@
+<apex:page >
+
+<apex:outputLink value="http://tciagency.talentlms.com/" id="theLink">GO</apex:outputLink>
+</apex:page>

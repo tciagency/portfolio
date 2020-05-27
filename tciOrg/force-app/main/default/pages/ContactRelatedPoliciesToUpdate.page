@@ -1,0 +1,52 @@
+<apex:page standardController="Contact" extensions="BulkPolicyUpdates" lightningStylesheets="true">
+<apex:slds />
+ <style>
+.pbBody td {
+ border-color: #E3DEB8;
+ border-style: none none solid;
+ border-width: medium medium 2px;
+ padding-bottom: 4px;
+ padding-top: 4px;
+ width: 85px;
+}
+.pbBody input   { width: 105px;}
+.pbBody .nameColumn { width: 150px;}
+.hdr     {;}
+</style>
+<apex:form >
+ <apex:messages />
+
+ <apex:sectionHeader title="Policies for" subtitle="{!Contact.name}" />
+ <apex:pageBlock title="Edit Policy Details:">
+     <apex:pageMessages id="msgId"/>
+  <apex:pageBlockButtons location="bottom">
+   <apex:commandButton action="{!saveChanges}" value="Save" styleclass="slds-button slds-button_neutral"
+    status="ajaxStatus" rerender="msgId"/>
+   <apex:commandButton action="{!cancel}" value="Cancel" styleclass="slds-button slds-button_neutral" />
+  </apex:pageBlockButtons>
+  <apex:actionStatus id="ajaxStatus" startText="Updating policies...">
+   <apex:facet name="stop">
+   <apex:outputPanel id="main">
+    <table>
+    <tr>
+     <apex:repeat value="{!headers}" var="h">
+      <td class="hdr">{!h}</td>
+     </apex:repeat>
+    </tr>
+
+    <apex:repeat value="{!policies}" var="p">
+     <tr>
+      <td><apex:outputlink value="{!URLFOR($Action.Policy__c.View, p.Id)}">{!p.Name}</apex:outputlink></td>
+      <td><apex:outputField value="{!p.Insurance_Company__c}" /></td>
+      <td><apex:outputField value="{!p.Product_Issued__c}" /></td>
+      <td><apex:inputfield value="{!p.Policy_Status__c}" /></td>
+      <td><apex:inputfield value="{!p.Name}" rendered="{!IF(p.Policy_Status__c = 'Active', true, false)}" required="true" /></td>
+     </tr>
+    </apex:repeat>
+    </table>
+   </apex:outputPanel>
+   </apex:facet>
+  </apex:actionStatus>
+ </apex:pageBlock>
+</apex:form>
+</apex:page>

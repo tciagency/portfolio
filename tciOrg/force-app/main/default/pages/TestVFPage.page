@@ -1,0 +1,14 @@
+<apex:page standardController="EZLynx__c">
+<apex:slds />
+<apex:form >
+<apex:pageBlock >
+    <apex:pageBlockSection >
+        
+        
+    </apex:pageBlockSection>
+    <apex:commandButton value="Save" action="{!Save}" styleclass="slds-button slds-button_neutral"
+    status="ajaxStatus" rerender="msgId"/> 
+</apex:pageBlock>
+
+</apex:form>
+</apex:page>
