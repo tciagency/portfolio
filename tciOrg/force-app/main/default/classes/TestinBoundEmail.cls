@@ -2,7 +2,7 @@
  * @description       : 
  * @author            : ChangeMeIn@UserSettingsUnder.SFDoc
  * @group             : 
- * @last modified on  : 10-08-2020
+ * @last modified on  : 10-11-2020
  * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
  * Modifications Log 
  * Ver   Date         Author                               Modification
@@ -27,7 +27,21 @@ private class TestinBoundEmail{
       attachment.body = blob.valueOf('my attachment text');
       attachment.fileName = 'textfileone.txt';
       attachment.mimeTypeSubType = 'text/plain';
-      email.binaryAttachments = new Messaging.inboundEmail.BinaryAttachment[] { attachment };      
+      email.binaryAttachments = new Messaging.inboundEmail.BinaryAttachment[] { attachment };
+      
+      // add Binary attachment content to Files object
+      Messaging.inboundEmail.BinaryAttachment binAttach = new Messaging.inboundEmail.BinaryAttachment();
+      ContentVersion cv = new ContentVersion();
+      cv.VersionData = binAttach.body;
+      cv.Title = binAttach.fileName;
+      cv.PathOnClient = binAttach.fileName;
+      //cv.FirstPublishLocationId = account.id; (optional);
+      email.binaryAttachments = new Messaging.inboundEmail.BinaryAttachment[] {binAttach};
+
+      ContentDocumentLink cdl = new ContentDocumentLink();
+      cdl.LinkedEntityId = cv.id;
+      cdl.ContentDocumentId = cv.ContentDocumentId;
+      email.binaryAttachments = new Messaging.inboundEmail.BinaryAttachment[] {binAttach};
   
       // add an Text atatchment  
       Messaging.InboundEmail.TextAttachment attachmenttext = new Messaging.InboundEmail.TextAttachment();
