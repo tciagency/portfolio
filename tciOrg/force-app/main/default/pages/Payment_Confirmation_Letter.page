@@ -5,10 +5,10 @@
     </head>
     <body>
     <div class="page-break">
-        <img alt="" src="https://c.na15.content.force.com/servlet/servlet.ImageServer?id=015i0000004PTT0&oid=00Di0000000JElI&lastMod=1411371346000" width="106" height="95"></img></div>
-    <apex:form ><p><b><H2>PAYMENT CONFIRMATION</H2></b></p>
+        <img alt="" src="https://tci-agents-dev-ed--c.documentforce.com/servlet/servlet.FileDownload?file=0150H00000HYhAM" width="150" height="100"></img></div>
+    <apex:form ><p><b><H2 style="text-align:center;color:black;">PAYMENT CONFIRMATION</H2></b></p>
     
-    <p>{!Confirmation__c.Insured__c}<br>
+    <p><b>{!Confirmation__c.Insured_Full_Name__c}</b><br>
     {!Confirmation__c.Mailing_Street__c}<br>
     {!Confirmation__c.Mailing_City__c}, {!Confirmation__c.Mailing_State__c}  {!Confirmation__c.Mailing_Zip__c}</br></br></p>
     
@@ -23,7 +23,9 @@
     
     <p>Thank you for allowing us to assist you with your insurance needs.</p>
     <br>
-    <p>The TCI Team</p>
+    <br>Policy Service</br>
+    <br>policyservice@topchoicellc.com</br>
+    <br>www.tciagency.info</br>
     
     </br>
     </apex:form></body>

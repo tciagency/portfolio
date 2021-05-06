@@ -1,8 +1,8 @@
 <apex:page standardController="Contact" renderAs="PDF" showheader="false" sidebar="false">
 
 <apex:styleSheet value="{!URLFOR($Resource.Envelope)}" />
-    <apex:panelGrid columns="1" style="padding-left:60px">
-        <apex:image alt="Company Log" url="{!$Resource.CompanyLogo}" height="40"/>
+    <apex:panelGrid columns="1" style="padding-left:10px">
+        <apex:image alt="Company Log" url="{!$Resource.CompanyLogo}" height="80"/>
         <apex:outputField value="{!Contact.owner.Street}"/>
         <apex:panelGroup >
             <apex:outputField value="{!Contact.owner.City}"/>,&nbsp; 
@@ -11,7 +11,7 @@
         </apex:panelGroup>
     </apex:panelGrid>
 
-    <apex:panelGrid columns="1" style="padding-left:400px; margin-top:150px;width:100%">
+    <apex:panelGrid columns="1" style="padding-left:400px; margin-top:100px;width:100%">
         <apex:panelGroup >
             <apex:outputField value="{!Contact.name}"/>
         </apex:panelGroup>

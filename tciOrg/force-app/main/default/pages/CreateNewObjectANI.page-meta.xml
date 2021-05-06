@@ -12,11 +12,6 @@
     </packageVersions>
     <packageVersions>
         <majorNumber>1</majorNumber>
-        <minorNumber>948</minorNumber>
-        <namespace>SDOC</namespace>
-    </packageVersions>
-    <packageVersions>
-        <majorNumber>1</majorNumber>
         <minorNumber>90</minorNumber>
         <namespace>SFSSDupeCatcher</namespace>
     </packageVersions>

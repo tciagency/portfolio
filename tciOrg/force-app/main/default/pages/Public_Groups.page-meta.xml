@@ -30,16 +30,6 @@
         <namespace>RRobin</namespace>
     </packageVersions>
     <packageVersions>
-        <majorNumber>3</majorNumber>
-        <minorNumber>124</minorNumber>
-        <namespace>RingCentral</namespace>
-    </packageVersions>
-    <packageVersions>
-        <majorNumber>2</majorNumber>
-        <minorNumber>347</minorNumber>
-        <namespace>SDOC</namespace>
-    </packageVersions>
-    <packageVersions>
         <majorNumber>2</majorNumber>
         <minorNumber>4</minorNumber>
         <namespace>SFSSDupeCatcher</namespace>
@@ -111,17 +101,7 @@
     </packageVersions>
     <packageVersions>
         <majorNumber>2</majorNumber>
-        <minorNumber>202</minorNumber>
-        <namespace>tangocardapp</namespace>
-    </packageVersions>
-    <packageVersions>
-        <majorNumber>2</majorNumber>
         <minorNumber>21</minorNumber>
         <namespace>tgen</namespace>
-    </packageVersions>
-    <packageVersions>
-        <majorNumber>1</majorNumber>
-        <minorNumber>2</minorNumber>
-        <namespace>webservicer</namespace>
     </packageVersions>
 </ApexPage>
